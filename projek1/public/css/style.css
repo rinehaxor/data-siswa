@@ -1,0 +1,35 @@
+.login {
+  justify-content: center;
+  align-items: center;
+}
+.text-awal {
+  text-align: justify;
+}
+.gambar {
+  margin-top: 2rem;
+}
+.jumbotron {
+  background-color: #464646ef;
+  color: white;
+  padding-top: 6rem;
+}
+
+#projects {
+  background-color: #464646ef;
+  color: white;
+}
+.card {
+  margin: 0 2rem 0 2rem;
+}
+.card-text {
+  color: black;
+}
+footer {
+  background-color: #000000;
+}
+section {
+  padding-top: 5rem;
+}
+.skill {
+  padding-left: 10rem;
+}

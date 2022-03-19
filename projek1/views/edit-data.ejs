@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Form ubah Data Mahasiswa</h2>
+
+      <% if (typeof errors != 'undefined') { %>
+      <div class="alert alert-danger" role="alert">
+        <ul>
+          <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+      </div>
+      <% } %>
+
+      <form method="POST" action="/data?_method=PUT">
+        <input type="hidden" name="_id" value="<%= siswa._id %>" />
+        <input type="hidden" name="oldNama" value="<%= siswa.oldNama || siswa.nama %>" />
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="nama" name="nama" required/ value="<%= siswa.nama %>" >
+        </div>
+        <div class="mb-3">
+          <label for="ipa" class="form-label">Nilai IPA</label>
+          <input type="text" class="form-control" id="ipa" name="ipa" required value="<%= siswa.ipa %>" />
+        </div>
+        <div class="mb-3">
+          <label for="ips" class="form-label">Nilai IPS</label>
+          <input type="text" class="form-control" id="ips" name="ips" required value="<%= siswa.ips %>" />
+        </div>
+        <button type="submit" class="btn btn-primary">ubah Data Mahasiswa</button>
+      </form>
+    </div>
+  </div>
+</div>

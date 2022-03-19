@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h2>Login Admin</h2>
+
+      <% if (typeof errors != 'undefined') { %>
+      <div class="alert alert-danger" role="alert">
+        <ul>
+          <% errors.forEach(error => { %>
+          <li><%= error.msg %></li>
+          <% }) %>
+        </ul>
+      </div>
+      <% } %>
+
+      <form method="post" action="/login">
+        <div class="mb-3">
+          <label for="nama" class="form-label">Nama</label>
+          <input type="text" class="form-control" id="nama" name="nama" required />
+        </div>
+        <div class="mb-3">
+          <label for="sandi" class="form-label">sandi</label>
+          <input type="sandi" class="form-control" id="sandi" name="sandi" required />
+        </div>
+        <button type="submit" class="btn btn-primary">login</button>
+      </form>
+    </div>
+  </div>
+</div>

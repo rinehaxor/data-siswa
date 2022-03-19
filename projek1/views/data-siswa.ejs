@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mt-3">
+      <h2>Daftar Nilai Mahasiswa</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">NO</th>
+            <th scope="col">Nama</th>
+            <th scope="col">No HP</th>
+            <th scope="col">IPS</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if ( siswas.length === 0) { %>
+          <tr>
+            <td colspan="4">
+              <div class="alert alert-danger fw-bold" role="alert">Data Kosong</div>
+            </td>
+          </tr>
+
+          <% } %> <% let no = 1 %> <% siswas.forEach(siswa => { %>
+          <tr>
+            <th scope="row"><%= no++ %></th>
+            <td><%= siswa.nama %></td>
+            <td><%= siswa.ipa %></td>
+            <td><%= siswa.ips %></td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
